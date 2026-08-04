@@ -1,0 +1,23 @@
+[project]
+name = "jspace-cot-ablation"
+version = "0.1.0"
+description = "J-space (Jacobian lens) ablation on Qwen3-4B, measured on GSM8K, MATH-500 and AIME 2024"
+requires-python = ">=3.10"
+dependencies = [
+    "accelerate>=1.14.0",
+    "datasets>=5.0.1",
+    "hf-transfer>=0.1.9",
+    "huggingface-hub>=1.25.1",
+    "jlens",
+    "matplotlib>=3.10.9",
+    "numpy>=2.2.6",
+    "torch>=2.13.0",
+    "tqdm>=4.67.0",
+    "transformers>=5.5",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+jlens = { git = "https://github.com/anthropics/jacobian-lens.git" }

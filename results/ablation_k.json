@@ -1,0 +1,63 @@
+{
+  "ablation_k": 10,
+  "best_specificity_margin_k": 5,
+  "candidates": [
+    5,
+    10,
+    20,
+    50,
+    100,
+    200
+  ],
+  "verdicts": {
+    "5": {
+      "effective": false,
+      "specific": true,
+      "surgical": true,
+      "specificity_margin": 0.27118644067796616,
+      "passes": false
+    },
+    "10": {
+      "effective": false,
+      "specific": true,
+      "surgical": true,
+      "specificity_margin": 0.1694915254237287,
+      "passes": false
+    },
+    "20": {
+      "effective": false,
+      "specific": false,
+      "surgical": true,
+      "specificity_margin": 0.05084745762711862,
+      "passes": false
+    },
+    "50": {
+      "effective": false,
+      "specific": false,
+      "surgical": true,
+      "specificity_margin": -0.03389830508474578,
+      "passes": false
+    },
+    "100": {
+      "effective": false,
+      "specific": false,
+      "surgical": true,
+      "specificity_margin": -0.18644067796610175,
+      "passes": false
+    },
+    "200": {
+      "effective": true,
+      "specific": false,
+      "surgical": true,
+      "specificity_margin": -0.22033898305084745,
+      "passes": false
+    }
+  },
+  "thresholds": {
+    "heavy_must_fall_below": 0.25,
+    "random_must_retain": 0.8,
+    "plain_text_must_keep": 0.5
+  },
+  "chosen_by": "user decision after gate 6 could not pass as specified",
+  "deviation_note": "Gate 6 did not pass: no k reaches near-zero two-hop accuracy while the random control barely moves. k=10 satisfies the specific and surgical criteria (random retains 0.88x, plain-text top-1 kept 0.696) and fails only the effectiveness criterion (0.71x vs required <=0.25x). Phase 7 therefore runs under a documented deviation, and Phase 8 must foreground it."
+}
